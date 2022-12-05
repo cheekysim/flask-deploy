@@ -7,9 +7,9 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      ${DIRECTORY}/code/ILS:/root/app
+      - ${DIRECTORY}/code/ILS:/root/app
     ports:
-      3000:3000
+      - 3000:3000
     labels:
       - "traefik.http.routers.ils-app.rule=Host(`ils.cheekysim.com`)"
     networks:
